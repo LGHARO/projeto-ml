@@ -1,0 +1,70 @@
+site_name: "Projeto ML - Adult Census Income"
+site_description: "Documentação completa do projeto de Machine Learning (APS 1 e APS 2) - Predição de Renda Censitária"
+site_author: "Léo Montefusco & Lucas Haro"
+site_url: ""
+
+theme:
+  name: material
+  language: pt-BR
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: deep purple
+      toggle:
+        icon: material/brightness-7
+        name: Mudar para modo escuro
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: indigo
+      accent: light blue
+      toggle:
+        icon: material/brightness-4
+        name: Mudar para modo claro
+  features:
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - navigation.path
+    - toc.follow
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+    - content.code.annotate
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.arithmatex:
+      generic: true
+  - attr_list
+  - md_in_html
+  - tables
+  - def_list
+  - footnotes
+
+extra_javascript:
+  - javascripts/mathjax.js
+  - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
+
+nav:
+  - Início: index.md
+  - APS 1 - EDA & Pipeline Inicial: aps1.md
+  - 1. Seleção & Otimização de Modelos: secao1.md
+  - 2. Avaliação no Teste: secao2.md
+  - 3. Interpretação & SHAP: secao3.md
+  - 4. Discussão Crítica & MLOps: secao4.md
+  - Referências & Apêndice: referencias.md
